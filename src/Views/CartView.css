@@ -4,8 +4,9 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: black; /* Matches the dark theme of the webpage */
     min-height: 100vh;
+    color: #4c7dd4; /* Matches the primary color scheme */
 }
 
 /* Grid layout for cart items */
@@ -20,17 +21,17 @@
 
 /* Individual cart item styling */
 .cart-item {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
+    background-color: #1a1a1a; /* Dark background for consistency */
+    border: 1px solid #4c7dd4; /* Matches the primary color */
     border-radius: 8px;
     padding: 15px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s ease-in-out;
 }
 
 .cart-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.02); /* Slight zoom effect */
 }
 
 /* Movie poster styling */
@@ -39,29 +40,41 @@
     height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
+    transition: transform 0.2s ease; /* Smooth transition for hover effects */
+}
+
+.cart-item img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 /* Movie title styling */
 .cart-item h3 {
     font-size: 1.2rem;
-    color: #333;
+    color: #4c7dd4; /* Matches the primary color */
     margin-bottom: 10px;
 }
 
 /* Remove button styling */
 .cart-item .remove-button {
-    background-color: #ff4d4d;
+    background-color: #ff4d4d; /* Bright red for visibility */
     color: #ffffff;
     border: none;
     border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 1rem;
+    padding: 8px 12px;
+    font-size: 0.9rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
 }
 
 .cart-item .remove-button:hover {
-    background-color: #e60000;
+    background-color: #e60000; /* Darker red on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.cart-item .remove-button:active {
+    background-color: #cc0000; /* Even darker red when clicked */
+    transform: scale(0.95); /* Slight shrink effect on click */
 }
 
 /* Pagination container styling */
@@ -86,10 +99,15 @@
 }
 
 .pagination-button:hover {
-    background-color: #3a5fa0;
+    background-color: #1e90ff;
+}
+
+.pagination-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
 }
 
 .pagination-number {
     font-size: 1rem;
-    color: #333;
+    color: #4c7dd4; /* Matches the primary color */
 }
